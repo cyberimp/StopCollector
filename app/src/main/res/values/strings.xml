@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Stop Collector</string>
+    <string name="whitelist_name">Unknown numbers</string>
+    <string name="blacklist_name">Black list</string>
+    <string name="history_name">Incoming call log</string>
+    <string name="title_activity_list_black">\@string/blacklist_name</string>
+    <string name="title_activity_list_log">ListLog</string>
+    <string name="title_activity_list_white">ListWhite</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_blacklist">Blacklist number</string>
+    <string name="header_log">Last 10 incoming calls:</string>
+    <string name="action_add">Add number...</string>
+    <string name="dialog_number">Enter phone number:</string>
+</resources>

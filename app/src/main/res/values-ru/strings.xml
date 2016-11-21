@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Стоп Коллектор</string>
+    <string name="whitelist_name">Неизвестные номера</string>
+    <string name="blacklist_name">Чёрный список</string>
+    <string name="history_name">История входящих</string>
+    <string name="action_delete">Удалить</string>
+    <string name="action_blacklist">Добавить в чёрный список</string>
+    <string name="header_log">10 последних входящих:</string>
+    <string name="action_add">Добавить номер...</string>
+    <string name="dialog_number">Введите номер телефона:</string>
+</resources>
