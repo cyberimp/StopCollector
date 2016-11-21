@@ -38,6 +38,10 @@
             android:name=".ListBlack"
             android:label="@string/title_activity_list_black"
             android:parentActivityName=".Blacklist">
+
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+            </intent-filter>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vk.ovoshi.stopcollector.Blacklist" />
