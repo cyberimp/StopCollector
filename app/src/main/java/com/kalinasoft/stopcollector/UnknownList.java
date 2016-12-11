@@ -1,4 +1,4 @@
-package com.vk.ovoshi.stopcollector;
+package com.kalinasoft.stopcollector;
 
 import android.content.Context;
 import android.util.Log;
@@ -29,11 +29,26 @@ public class UnknownList extends Observable {
         try {
             FileInputStream fis = context.openFileInput("unknown_list");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            NumberList = (ArrayList) ois.readObject();
+            NumberList = (ArrayList<String>) ois.readObject();
             ois.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void saveList(){
+        setChanged();
+        notifyObservers();
+        Context context = MyApp.getAppContext();
+        try {
+            FileOutputStream fos = context.openFileOutput("unknown_list",Context.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(NumberList);
+            oos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public boolean add(String number){
@@ -41,23 +56,18 @@ public class UnknownList extends Observable {
             return false;
         else {
             NumberList.add(number);
-            setChanged();
-            notifyObservers();
-            Context context = MyApp.getAppContext();
-            try {
-                FileOutputStream fos = context.openFileOutput("unknown_list",Context.MODE_PRIVATE);
-                ObjectOutputStream oos = new ObjectOutputStream(fos);
-                oos.writeObject(NumberList);
-                oos.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
+            saveList();
             return true;
         }
     }
 
-    private boolean hasNumber(String number){
+    public String delete(int number) {
+        String deleted =  NumberList.remove(number);
+        saveList();
+        return deleted;
+    }
+
+        private boolean hasNumber(String number){
         return NumberList.contains(number);
     }
 
@@ -69,5 +79,10 @@ public class UnknownList extends Observable {
             return new String[]{"Here be niggers!"};
         else
             return result;
+    }
+
+    public void clear(){
+        NumberList.clear();
+        saveList();
     }
 }

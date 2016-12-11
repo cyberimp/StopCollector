@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.vk.ovoshi.stopcollector.Blacklist">
+    tools:context=".Blacklist">
 
     <LinearLayout
         android:orientation="vertical"
@@ -35,6 +35,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/button3"
             android:onClick="actionHistory" />
+
+        <Button
+            android:text="@string/action_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:onClick="actionSettings" />
 
     </LinearLayout>
 </RelativeLayout>

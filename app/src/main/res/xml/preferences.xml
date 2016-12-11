@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="2"
+        android:title="@string/setting_block_type"
+        android:entries="@array/block_type"
+        android:entryValues="@array/block_type_value"
+        android:key="block_type" />
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:title="@string/setting_block_private"
+        android:key="block_private" />
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:title="@string/setting_block_unknown"
+        android:key="block_unknown"
+        android:summary="@string/setting_block_unknown_exp"/>
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:title="@string/setting_automatic_whitelist"
+        android:key="unblock_auto"
+        android:summary="@string/summary_automatic"/>
+</PreferenceScreen>

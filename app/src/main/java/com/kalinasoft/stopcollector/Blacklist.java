@@ -1,9 +1,14 @@
-package com.vk.ovoshi.stopcollector;
+package com.kalinasoft.stopcollector;
 
+import android.Manifest;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
+import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,11 +29,19 @@ public class Blacklist extends AppCompatActivity {
                 && !notificationManager.isNotificationPolicyAccessGranted()) {
 
             Intent intent = new Intent(
-                    android.provider.Settings
+                    Settings
                             .ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
 
             startActivity(intent);
         }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{Manifest.permission.CALL_PHONE,
+                    Manifest.permission.READ_CONTACTS,
+                    Manifest.permission.READ_PHONE_STATE},1);
+        }
+
+
     }
 
     @Override
@@ -47,6 +60,11 @@ public class Blacklist extends AppCompatActivity {
     }
     public void actionWhite(View v){
         Intent intent = new Intent(this, ListWhite.class);
+        startActivity(intent);
+    }
+
+    public void actionSettings(View v){
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 }

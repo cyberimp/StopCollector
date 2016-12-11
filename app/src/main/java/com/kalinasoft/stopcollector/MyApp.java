@@ -1,4 +1,4 @@
-package com.vk.ovoshi.stopcollector;
+package com.kalinasoft.stopcollector;
 
 import android.app.Application;
 import android.content.Context;

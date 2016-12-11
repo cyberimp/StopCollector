@@ -7,6 +7,21 @@
     <string name="action_delete">Удалить</string>
     <string name="action_blacklist">Добавить в чёрный список</string>
     <string name="header_log">10 последних входящих:</string>
-    <string name="action_add">Добавить номер...</string>
+    <string name="action_add">Добавить контакт…</string>
     <string name="dialog_number">Введите номер телефона:</string>
+    <string name="setting_block_private">Блокировать скрытые</string>
+    <string name="title_activity_list_black">Чёрный список</string>
+    <string name="title_activity_list_log">История входящих</string>
+    <string name="title_activity_list_white">Неизвестные номера</string>
+    <string name="warning_unknown_ban">Используйте настройки, чтобы заблокировать скрытые номера.</string>
+    <string name="setting_block_type">Способ блокирования…</string>
+    <string name="setting_automatic_whitelist">Авто белый список</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="action_settings">Настройки</string>
+    <string name="summary_automatic">Записывает неизвестные номера и позволяет проходить второму звонку с неизвестного номера</string>
+    <string name="action_clear">Очистить список</string>
+    <string name="action_clear_really">Вы действительно хотите очистить этот список? Вы не сможете отменить это действие.</string>
+    <string name="action_ban_complete">Номер добавлен в чёрный список</string>
+    <string name="setting_block_unknown">Блокировать неизвестные</string>
+    <string name="setting_block_unknown_exp">Блокировать звонки с номеров, не записаных в телефонную книжку, кроме белого списка</string>
 </resources>
